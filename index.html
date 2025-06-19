@@ -1,152 +1,24 @@
-<!DOCTYPE html>
-<html>
 
-  <head>
-    <title>Mark Mayne Jr</title>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        function resizeRedBar()
-        {
-            //determine what size the strip should be
-            var offset = $("#right_col").offset();
-            var windowWidth = $(window).width();
-            //now set the width of the red strip
-            $("#right_col_box_stripe_split").width(windowWidth - offset.left);
-        }
-    
-    $(document).ready(function()
-                      {
-                      //set size of red bar when page loads
-                      resizeRedBar();
-                      
-                      $(window).resize(function()
-                                       {
-                                       //set size of red bar when window is resized
-                                       resizeRedBar();
-                                       });
-                      });
-        </script>
-    <style type="text/css">
-        body
-        {
-            width: 100%;
-            height: 200%;
-            margin: 0;
-            font-size: 14px;
-            font-family: 'Karla', sans-serif;
-            line-height: 20px;
-            color: #333333;
-            background-color: #C26868;
-            -webkit-font-smoothing: antialiased;
-            -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
-            -moz-animation: fadein 4s; /* Firefox < 16 */
-            -ms-animation: fadein 4s; /* Internet Explorer */
-            -o-animation: fadein 4s; /* Opera < 12.1 */
-            animation: fadein 4s;
-        }
-        .blink_me {
-            animation: blinker .5s linear infinite;
-        }
-        @keyframes blinker {
-            50% { opacity: 0; }
-        }
-        /* vDONT TOUCH THIS IS FADE EFFECT*/
-        @keyframes fadein {
-            from { opacity: 0; }
-            to   { opacity: 1; }
-        }
-    
-        /* Firefox < 16 */
-        @-moz-keyframes fadein {
-            from { opacity: 0; }
-            to   { opacity: 1; }
-        }
-    
-        /* Safari, Chrome and Opera > 12.1 */
-        @-webkit-keyframes fadein {
-            from { opacity: 0; }
-            to   { opacity: 1; }
-        }
-    
-        /* Internet Explorer */
-        @-ms-keyframes fadein {
-            from { opacity: 0; }
-            to   { opacity: 1; }
-        }
-    
-        /* Opera < 12.1 */
-        @-o-keyframes fadein {
-            from { opacity: 0; }
-            to   { opacity: 1; }
-        }
-        /* ^DONT TOUCH THIS IS FADE EFFECT*/
-        #header
-        {
-            position: fixed;
-            top: 0;
-            left: 0;
-            font-family: 'Montserrat', sans-serif;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            text-align: center;
-            width: 100%;
-            background-color: #e6e6e6;
-            line-height: 100px;
-            font-size: 15px;
-            z-index: 1000;
-        }
-        #terminal
-        {
-            text-align:center;
-            margin-top:105px;
-            background-color:#d1dada;
-            margin-left:25%;
-            width:50%;
-            border-top-right-radius:5px;
-            border-top-left-radius:5px;
-        }
-         #descMe
-       {
-             padding-left: 1%;
-             padding-bottom: 10%;
-             height:100%;
-             color: white;
-             background-color: black;
-             width:49%;
-             margin-left:25%;
-             border-color:black;
-             border-style:none;
-             border-bottom-style:solid;
-             border-bottom-right-radius:5px;
-             border-bottom-left-radius:5px;
-             font-family:"Lucida Console", Monaco, monospace;
-         }
-    </style>
-  </head>
-  <body>
-      <div id="header">
-          Mark Mayne Jr.
-      </div>
-      <div id ="terminal">
-          Terminal
-      </div>
-      <div id="descMe">
-          Mark's-Website: ~ markmayne$ ls <br />
-          <a style="color: white;text-decoration: none;" href="/aboutMe.html">AboutMe.txt</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <a style="color: white;text-decoration: none;" href="/objectives.html">Objectives.txt</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <a style="color: white;text-decoration: none;" href="#exp">Expirence.txt</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <a style="color: white;text-decoration: none;" href="#edu">Education.txt</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <a style="color: white;text-decoration: none;" href="#awards">Awards.txt</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <a style="color: white;text-decoration: none;" href="#addskill">AdditionalSkills.txt</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <a style="color: white;text-decoration: none;" href="#ref">Refrences.txt</a><br />
-          Mark's-Website:~ markmayne$ open <a style="color: white;text-decoration: none;" href="/aboutMe.html">AboutMe.txt</a><br />
-          Mark's-Website:~ markmayne$ open <a style="color: white;text-decoration: none;" href="/objectives.html">Objectives.txt</a><br />
-          Mark's-Website:~ markmayne$ open <a style="color: white;text-decoration: none;" href="#exp">Expirence.txt</a><br />
-          Mark's-Website:~ markmayne$ open <a style="color: white;text-decoration: none;" href="#edu">Education.txt</a><br />
-          Mark's-Website:~ markmayne$ open <a style="color: white;text-decoration: none;" href="#awards">Awards.txt</a><br />
-          Mark's-Website:~ markmayne$ open <a style="color: white;text-decoration: none;" href="#addskill">AdditionalSkills.txt</a><br />
-          Mark's-Website:~ markmayne$ open <a style="color: white;text-decoration: none;" href="#ref">Refrences.txt</a><br />
-          Mark's-Website:~ markmayne$ // The above \"Documents\" are clickable<span class="blink_me"><b>|</b></span><br />
-      </div>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mark Mayne Jr</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <div class="terminal">
+    Mark's-Website:~ markmayne$ ls<br />
+    <a href="aboutMe.html">AboutMe.txt</a><br />
+    <a href="objectives.html">Objectives.txt</a><br />
+    <a href="resume.html">Resume.txt</a><br />
+    <a href="projects.html">Projects.txt</a><br />
+    <a href="contact.html">Contact.txt</a><br />
+    <br />
+    Mark's-Website:~ markmayne$ // Click a file to view it
+    <span class="cursor"></span>
+  </div>
+  <script src="scripts/main.js"></script>
+</body>
 </html>
