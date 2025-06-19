@@ -253,6 +253,10 @@ a {
     padding: 1rem;
     font-size: 0.95rem;
   }
+  /* Ensure the terminal bar sits flush against the top on mobile */
+  .terminal-window {
+    padding: 0;
+  }
   .notepad,
   .terminal-window,
   .chalkboard,
