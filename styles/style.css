@@ -197,8 +197,8 @@ a {
   font-weight: bold;
 }
 
-/* Resume page link override */
-.resume-page a {
+/* Resume page link override for content links */
+.resume-page .container a {
   color: #0044cc;
 }
 
