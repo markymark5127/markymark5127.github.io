@@ -68,8 +68,14 @@ a {
 /* Notepad (About Me) */
 .notepad {
   background-color: #fef3a3;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #fef3a3 0px,
+    #fef3a3 29px,
+    #add8e6 30px
+  );
   border: 1px solid #ccc;
-  padding: 2rem;
+  padding: 5rem 2rem 2rem 2rem;
   margin: 3rem auto;
   width: 90%;
   max-width: 700px;
@@ -81,23 +87,27 @@ a {
 .notepad::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 40px;
-  background: repeating-linear-gradient(#fef3a3, #fef3a3 38px, #eaeaea 40px);
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5rem;
+  background-color: #fef3a3;
   z-index: 1;
 }
 .notepad::after {
   content: '';
   position: absolute;
-  top: 0; bottom: 0;
+  top: 0;
+  bottom: 0;
   left: 50px;
   width: 2px;
   background: red;
-  z-index: 0;
+  z-index: 2;
 }
 .notepad-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  margin-left: 60px;
 }
 
 /* Sticky Notes (Projects) */
@@ -118,6 +128,17 @@ a {
   transform: rotate(-2deg);
 }
 .sticky:nth-child(odd) { transform: rotate(2deg); }
+
+/* Simple Navigation */
+.nav-links {
+  text-align: center;
+  margin: 1rem 0;
+}
+.nav-links a {
+  margin: 0 0.5rem;
+  color: inherit;
+  font-weight: bold;
+}
 
 /* Chalkboard (Objectives) */
 .chalkboard {
