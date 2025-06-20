@@ -246,10 +246,10 @@ a {
   height: 48px;
   border-radius: 50%;
   background: var(--nav-bg);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: var(--nav-border);
-  z-index: 1100;
+  z-index: 1000;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -463,12 +463,12 @@ a {
     top: calc(60px + 1.5rem);
     left: 1rem;
     background: var(--nav-bg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: var(--nav-border);
     padding: 1rem;
     border-radius: 15px;
-    z-index: 1099;
+    z-index: 1000;
     width: 200px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 
