@@ -221,10 +221,10 @@ a {
 }
 
 /* Resume page link override for content links */
-.resume-page .container a {
+.resume-page .resume-container a {
   color: #0044cc;
 }
-.resume-page .container {
+.resume-page .resume-container {
   background: #fff;
   color: #000;
   font-family: Arial, sans-serif;
@@ -233,6 +233,90 @@ a {
   border-radius: 8px;
   padding: 2rem;
   margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.resume-page .resume-sidebar {
+  width: 35%;
+  background-color: #b25e5e;
+  color: #fff;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.resume-page .resume-sidebar h2 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  border-bottom: 1px solid #555;
+  padding-bottom: 0.5rem;
+}
+.resume-page .resume-sidebar .profile-pic {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 4px solid #fff;
+}
+.resume-page .resume-sidebar ul {
+  list-style-type: square;
+  padding-left: 1.2rem;
+}
+.resume-page .resume-sidebar a {
+  color: #ccc;
+  text-decoration: none;
+}
+.resume-page .resume-sidebar a:hover {
+  text-decoration: underline;
+}
+.resume-page .resume-content {
+  width: 65%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.resume-page .resume-content header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+.resume-page .resume-content header h2 {
+  margin-top: 0.5rem;
+  font-weight: normal;
+  color: #777;
+}
+.resume-page .resume-content section {
+  margin-bottom: 2rem;
+}
+.resume-page .resume-content section h2 {
+  font-size: 1.3rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+.resume-page .resume-content .job h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+.resume-page .resume-content .job p {
+  margin: 0.2rem 0 0.5rem;
+  font-style: italic;
+  color: #555;
+}
+.resume-page .resume-content ul li {
+  margin-bottom: 0.5rem;
+}
+@media screen and (max-width: 768px) {
+  .resume-page .resume-container {
+    flex-direction: column;
+  }
+  .resume-page .resume-sidebar,
+  .resume-page .resume-content {
+    width: 100%;
+  }
+  .resume-page .resume-sidebar .profile-pic {
+    width: 150px;
+    margin: auto;
+    display: block;
+  }
 }
 .resume-page ul {
   margin-left: 1.2rem;
