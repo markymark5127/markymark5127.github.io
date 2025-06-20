@@ -137,7 +137,7 @@ a {
 }
 .sticky {
   background: #fffb9c;
-  width: 160px;
+  width: 200px;
   padding: 1rem;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
   font-family: 'Caveat', cursive;
@@ -172,7 +172,10 @@ a {
   border-radius: 4px;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  font-family: 'Courier New', monospace;
+  font-family: 'Montserrat', sans-serif;
+}
+.contact-page {
+  font-family: 'Montserrat', sans-serif;
 }
 .contact-form input[type="submit"] {
   background: #333;
@@ -239,15 +242,15 @@ a {
   border: none;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
-  flex-direction: row;
-  gap: 5px;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .nav-toggle span {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.8);
+  width: 24px;
+  height: 3px;
+  border-radius: 1px;
+  background: #000;
   transition: all 0.3s ease;
 }
 
@@ -257,9 +260,9 @@ a {
 
 .nav-toggle.open span {
   width: 24px;
-  height: 2px;
+  height: 3px;
   border-radius: 1px;
-  background: rgba(255, 255, 255, 0.85);
+  background: #000;
   position: absolute;
 }
 
@@ -362,15 +365,23 @@ a {
 @media screen and (max-width: 768px) {
   .resume-page .resume-container {
     flex-direction: column;
+    padding: 1rem;
   }
   .resume-page .resume-sidebar,
   .resume-page .resume-content {
     width: 100%;
+    padding: 1rem;
   }
   .resume-page .resume-sidebar .profile-pic {
     width: 150px;
     margin: auto;
     display: block;
+  }
+  .resume-page .resume-content header h1 {
+    font-size: 1.6rem;
+  }
+  .resume-page .resume-content header h2 {
+    font-size: 1.1rem;
   }
 }
 .resume-page ul {
