@@ -27,7 +27,7 @@ a {
   box-shadow: 0 0 10px #000;
   box-sizing: border-box;
   width: 90%;
-  max-width: 850px;
+  max-width: 1000px;
   margin: 3rem auto;
   overflow: hidden;
 }
@@ -83,7 +83,7 @@ a {
   padding: 5rem 2rem 2rem 2rem;
   margin: 3rem auto;
   width: 90%;
-  max-width: 850px;
+  max-width: 1000px;
   font-family: 'Caveat', cursive;
   color: #000;
   position: relative;
@@ -131,18 +131,23 @@ a {
   gap: 1rem;
   padding: 2rem;
   width: 90%;
-  max-width: 850px;
+  max-width: 1000px;
   margin: 4rem auto 0 auto;
   box-sizing: border-box;
 }
 .sticky {
   background: #fffb9c;
-  width: 200px;
+  width: 250px;
+  height: 250px;
   padding: 1rem;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
   font-family: 'Caveat', cursive;
+  font-size: 1.5rem;
   color: #000;
   transform: rotate(-2deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .sticky a {
   color: #000000;
@@ -187,8 +192,11 @@ a {
 
 /* Redesigned Navigation */
 .navbar {
-  background: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(8px);
+  background: linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.2) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.4);
+  box-shadow: 0 0 30px rgba(0,0,0,0.15);
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -197,7 +205,6 @@ a {
   left: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -233,8 +240,10 @@ a {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(8px);
+  background: linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.2) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.4);
   z-index: 1100;
   align-items: center;
   justify-content: center;
@@ -435,7 +444,8 @@ a {
     margin: 1rem auto;
   }
   .sticky {
-    width: 120px;
+    width: 180px;
+    height: 180px;
   }
   .notepad-content {
     font-size: 1rem;
@@ -448,8 +458,10 @@ a {
     position: fixed;
     top: calc(60px + 1.5rem);
     left: 1rem;
-    background: rgba(255, 255, 255, 0.45);
-    backdrop-filter: blur(8px);
+    background: linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.2) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.4);
     padding: 1rem;
     border-radius: 15px;
     z-index: 1099;
