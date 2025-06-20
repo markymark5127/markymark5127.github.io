@@ -1,16 +1,19 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 :root {
-  --nav-bg: linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.2) 100%);
-  --nav-border: 1px solid rgba(255,255,255,0.4);
+  --nav-bg: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.45) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  --nav-border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 /* Global Reset and Base */
 body {
   margin: 0;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   background-color: #b25e5e;
   color: #fff;
   padding-top: 60px;
@@ -49,9 +52,15 @@ a {
   border-radius: 50%;
   display: inline-block;
 }
-.terminal-bar .close { background-color: #ff5f56; }
-.terminal-bar .min { background-color: #ffbd2e; }
-.terminal-bar .max { background-color: #27c93f; }
+.terminal-bar .close {
+  background-color: #ff5f56;
+}
+.terminal-bar .min {
+  background-color: #ffbd2e;
+}
+.terminal-bar .max {
+  background-color: #27c93f;
+}
 
 /* Terminal Window */
 .terminal {
@@ -60,7 +69,7 @@ a {
   font-size: 1rem;
   padding: 1.5rem;
   line-height: 1.5;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 .cursor {
   display: inline-block;
@@ -70,8 +79,15 @@ a {
   margin-left: 5px;
 }
 @keyframes blink {
-  0%, 50%, 100% { opacity: 1; }
-  25%, 75% { opacity: 0; }
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
 }
 
 /* Notepad (About Me) */
@@ -89,13 +105,13 @@ a {
   margin: 3rem auto;
   width: 90%;
   max-width: 1000px;
-  font-family: 'Caveat', cursive;
+  font-family: "Caveat", cursive;
   color: #000;
   position: relative;
   box-sizing: border-box;
 }
 .notepad::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -105,7 +121,7 @@ a {
   z-index: 1;
 }
 .notepad::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -145,8 +161,8 @@ a {
   width: 250px;
   height: 250px;
   padding: 1rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  font-family: 'Caveat', cursive;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  font-family: "Caveat", cursive;
   font-size: 1.5rem;
   color: #000;
   transform: rotate(-2deg);
@@ -160,7 +176,9 @@ a {
   padding: 0 4px;
   border-radius: 2px;
 }
-.sticky:nth-child(odd) { transform: rotate(2deg); }
+.sticky:nth-child(odd) {
+  transform: rotate(2deg);
+}
 
 /* Contact Form */
 .contact-form {
@@ -171,7 +189,7 @@ a {
   margin: 4rem auto 2rem;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
 }
 .contact-form input,
@@ -182,10 +200,10 @@ a {
   border-radius: 4px;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .contact-page {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .contact-form input[type="submit"] {
   background: #333;
@@ -201,8 +219,8 @@ a {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: var(--nav-border);
-  box-shadow: 0 0 30px rgba(0,0,0,0.15);
-  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+  font-family: "Montserrat", sans-serif;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   position: fixed;
@@ -229,7 +247,9 @@ a {
   font-weight: 600;
   padding: 0.5rem 0.8rem;
   border-radius: 4px;
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 .navbar .nav-links a:hover {
   background-color: #333;
@@ -253,7 +273,7 @@ a {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   flex-direction: column;
   gap: 6px;
@@ -298,9 +318,9 @@ a {
 .resume-page .resume-container {
   background: #fff;
   color: #000;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.6;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   padding: 2rem;
   margin-top: 2rem;
@@ -414,12 +434,12 @@ a {
 .chalkboard {
   background: #2b3e30;
   color: #fff;
-  font-family: 'Caveat', cursive;
+  font-family: "Caveat", cursive;
   padding: 2rem;
   width: 95%;
   max-width: 850px;
   margin: 3rem auto;
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
   border: 8px solid #614a3a;
   box-sizing: border-box;
   font-size: 1.2rem;
@@ -470,7 +490,7 @@ a {
     border-radius: 15px;
     z-index: 1000;
     width: 200px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 
     opacity: 0;
     transform: translateY(-20px);
@@ -479,7 +499,10 @@ a {
 
     display: flex;
     flex-direction: column;
-    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+    transition:
+      opacity 0.4s ease,
+      transform 0.4s ease,
+      visibility 0.4s;
     padding: 1rem;
   }
   .navbar .nav-links.show {
