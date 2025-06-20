@@ -184,7 +184,8 @@ a {
 
 /* Redesigned Navigation */
 .navbar {
-  background: #e6e6e6;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -218,6 +219,60 @@ a {
 .navbar .nav-links a:hover {
   background-color: #333;
   color: #fff;
+}
+
+/* Mobile Navigation Toggle */
+.nav-toggle {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  z-index: 1100;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.nav-toggle span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+.nav-toggle.open {
+  gap: 0;
+}
+
+.nav-toggle.open span {
+  width: 24px;
+  height: 2px;
+  border-radius: 1px;
+  background: rgba(255, 255, 255, 0.85);
+  position: absolute;
+}
+
+.nav-toggle.open span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.nav-toggle.open span:nth-child(2) {
+  display: none;
+}
+
+.nav-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg);
 }
 
 /* Resume page link override for content links */
@@ -375,13 +430,46 @@ a {
     font-size: 1rem;
     line-height: 30px;
   }
+  .nav-toggle {
+    display: flex;
+  }
   .navbar .nav-links {
-    padding: 0.5rem 0;
+    position: fixed;
+    top: calc(60px + 1.5rem);
+    left: 1rem;
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(8px);
+    padding: 1rem;
+    border-radius: 15px;
+    z-index: 1099;
+    width: 200px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+    padding: 1rem;
+  }
+  .navbar .nav-links.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
   }
   .navbar .nav-links li {
-    margin: 0 0.3rem;
+    margin: 0.5rem 0;
   }
   .navbar .nav-links a {
-    padding: 0.3rem 0.6rem;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #333;
+    font-weight: 300;
+    text-align: left;
+    text-decoration: none;
   }
 }
