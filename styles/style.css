@@ -22,6 +22,11 @@ a {
   color: #33ff33;
   text-decoration: none;
 }
+
+/* Blog posts links */
+#blog-list a {
+  color: #ffbd2e;
+}
 .container {
   padding: 2rem;
   max-width: 900px;
