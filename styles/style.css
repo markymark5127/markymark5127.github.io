@@ -27,6 +27,21 @@ a {
 #blog-list a {
   color: #ffbd2e;
 }
+.blog-page #blog-list a {
+  color: #3498db;
+  text-decoration: underline;
+}
+.blog-page #blog-list a:hover {
+  color: #217dbb;
+}
+
+.certifications-page .notepad-content a {
+  color: #3498db;
+  text-decoration: underline;
+}
+.certifications-page .notepad-content a:hover {
+  color: #217dbb;
+}
 .container {
   padding: 2rem;
   max-width: 900px;
