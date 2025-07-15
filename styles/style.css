@@ -24,14 +24,14 @@ a {
 }
 
 /* Blog posts links */
-#blog-list a {
+#blog-posts a {
   color: #ffbd2e;
 }
-.blog-page #blog-list a {
+.blog-page #blog-posts a {
   color: #3498db;
   text-decoration: underline;
 }
-.blog-page #blog-list a:hover {
+.blog-page #blog-posts a:hover {
   color: #217dbb;
 }
 
