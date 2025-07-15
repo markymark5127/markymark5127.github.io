@@ -2,15 +2,23 @@ document.addEventListener('DOMContentLoaded', () => {
   fetch('posts/posts.json')
     .then(res => res.json())
     .then(posts => {
-      const list = document.getElementById('blog-list');
-      if (!list) return;
+      const container = document.getElementById('blog-posts');
+      if (!container) return;
       posts.forEach(post => {
-        const li = document.createElement('li');
-        const a = document.createElement('a');
-        a.href = post.file;
-        a.textContent = `${post.title} - ${post.date}`;
-        li.appendChild(a);
-        list.appendChild(li);
+        const article = document.createElement('article');
+        const h2 = document.createElement('h2');
+        h2.textContent = post.title;
+
+        const dateP = document.createElement('p');
+        dateP.textContent = `Date: ${post.date}`;
+
+        const contentDiv = document.createElement('div');
+        contentDiv.innerHTML = post.content;
+
+        article.appendChild(h2);
+        article.appendChild(dateP);
+        article.appendChild(contentDiv);
+        container.appendChild(article);
       });
     })
     .catch(err => {
