@@ -7,17 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
       posts.forEach(post => {
         const article = document.createElement('article');
         const h2 = document.createElement('h2');
-        h2.textContent = post.title;
+        const link = document.createElement('a');
+        link.href = `post.html?slug=${encodeURIComponent(post.slug)}`;
+        link.textContent = post.title;
+        h2.appendChild(link);
 
         const dateP = document.createElement('p');
         dateP.textContent = `Date: ${post.date}`;
 
-        const contentDiv = document.createElement('div');
-        contentDiv.innerHTML = post.content;
-
         article.appendChild(h2);
         article.appendChild(dateP);
-        article.appendChild(contentDiv);
         container.appendChild(article);
       });
     })
