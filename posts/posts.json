@@ -1,11 +1,13 @@
 [
   {
     "title": "My First Post",
+    "slug": "first-post",
     "date": "July 4th, 2025",
     "content": "<p>This is my first blog post! I have a couple things in the works, developing an iPad app named PenLite, waiting for approval of my Android ports of StyleSync AI and RecipeSnap AI to be approved for the PlayStore.</p>"
   },
   {
     "title": "Macintosh Pi Project",
+    "slug": "macintosh-pi-project",
     "date": "July 15th, 2025",
     "content": "<p>I have been developing a script for a Raspberry Pi 5 that automatically installs all that you need to run a Macintosh LC575 the last true 68k Compact Mac a.k.a. \"The Macintosh Mystic\". I'm developing this for my daughter so she has a computer she can play with thats not internet reliant and can play the learning 90's computer games I played when I was a kid. I designed the .stl files based around a concept Macintosh image i found in the book \"Keep It Simple The Early Design Years of Apple\" by. Hartmut Esslinger. The files are currently live on my GitHub the repo name is \"MacintoshPi_BasiliskII_System_8.1\"</p>"
   }
